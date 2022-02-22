@@ -1,0 +1,68 @@
+﻿@model Model.EmployeeModel
+
+@{
+    //Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+    <h4>Create</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="form-control text-danger"></div>
+                @*<div class="form-group">
+                        <label asp-for="EmployeeID" class="control-label"></label>
+                        <input asp-for="EmployeeID" class="form-control" />
+                        <span asp-validation-for="EmployeeID" class="text-danger"></span>
+                    </div>*@
+                <input type="hidden" />
+                <div class="form-group">
+                    <label asp-for="EmployeeName" class="control-label"></label>
+                    <input asp-for="EmployeeName" class="form-control" />
+                    <span asp-validation-for="EmployeeName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EmployeeGender" class="control-label"></label>
+                    <input asp-for="EmployeeGender" class="form-control" />
+                    <span asp-validation-for="EmployeeGender" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EmployeeDesignation" class="control-label"></label>
+                    <input asp-for="EmployeeDesignation" class="form-control" />
+                    <span asp-validation-for="EmployeeDesignation" class="text-danger"></span>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <a asp-action="Index" class="btn btn-primary">Back to List</a>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
